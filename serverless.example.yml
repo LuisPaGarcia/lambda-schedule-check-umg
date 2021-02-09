@@ -1,0 +1,18 @@
+service: lambda-schedule-check-umg
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: prod
+  region: us-east-1
+
+functions:
+  verifyUmgGuide:
+    handler: handler.verifyUmgGuide
+    events:
+      - schedule: rate(2 hours)
+      - schedule: cron(0 12 * * ? *)
+    environment:
+      EMAIL: ""
+      PASSWORD: ""
+      DESTINY_EMAILS: ""
