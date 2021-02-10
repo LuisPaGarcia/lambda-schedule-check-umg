@@ -1,15 +1,21 @@
 {
-  "name": "lambda-schedule-check-umg",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./src/verifyGuides.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1"
-  }
+	"name": "lambda-schedule-check-umg",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./src/verifyGuides.js",
+		"test": "tape ./tests/*.test.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"github-base": "^1.0.0",
+		"twilio": "^3.55.1"
+	},
+	"devDependencies": {
+		"tape": "^5.1.1"
+	}
 }

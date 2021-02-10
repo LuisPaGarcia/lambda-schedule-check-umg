@@ -10,9 +10,4 @@ functions:
   verifyUmgGuide:
     handler: handler.verifyUmgGuide
     events:
-      - schedule: rate(2 hours)
       - schedule: cron(0 12 * * ? *)
-    environment:
-      EMAIL: ""
-      PASSWORD: ""
-      DESTINY_EMAILS: ""
