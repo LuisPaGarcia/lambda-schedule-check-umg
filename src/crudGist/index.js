@@ -1,3 +1,4 @@
+const process = require('../../env').github;
 const githubBase = require('github-base');
 const FILENAME = 'lambda-umg-status.json';
 
