@@ -10,4 +10,4 @@ functions:
   verifyUmgGuide:
     handler: handler.verifyUmgGuide
     events:
-      - schedule: cron(0 12 * * ? *)
+      - schedule: cron(0 */2 * * *)

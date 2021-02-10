@@ -1,4 +1,4 @@
 node_modules/
 serverless.yml
-.env
+.env.local
 env.js
