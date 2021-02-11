@@ -1,4 +1,3 @@
-const process = require('../env').github;
 const test = require('tape');
 const CrudGist = require('../src/crudGist/index');
 

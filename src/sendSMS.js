@@ -1,4 +1,3 @@
-const process = require('../env').twilio;
 const accountSid = process.env.ACCOUNTSID;
 const authToken = process.env.AUTHTOKEN;
 const from = process.env.PHONE_NUMBER_FROM;

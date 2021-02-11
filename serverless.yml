@@ -1,13 +1,20 @@
 service: lambda-schedule-check-umg
-
+useDotenv: true
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
   stage: prod
   region: us-east-1
+  environment:
+    GITHUB_TOKEN: ''
+    GIST_DB_ID: ''
+    ACCOUNTSID: ''
+    AUTHTOKEN: ''
+    PHONE_NUMBER_FROM: ''
+    PHONE_NUMBER_TO: ''
 
 functions:
   verifyUmgGuide:
     handler: handler.verifyUmgGuide
     events:
-      - schedule: cron(0 */2 * * *)
+      - schedule: rate(2 hours)
